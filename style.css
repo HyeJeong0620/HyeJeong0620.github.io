@@ -1,22 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-
-body{
-    background: #F9F7F7;
-    text-align: center;
-    font-family: "Lato", sans-serif;
+*{
+  margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-header{
-  text-align: left;
+body{
+    font-family: "Lato", sans-serif;
 }
 
 .container{
     text-align: center;
     font-family: Arial;
+    padding: 0%;
+    position: relative;
+    width:100%;
+    height:100vh; 
+    overflow:auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory ;
 }
 
 button {
-    margin: 20px;
+  margin: 20px;
 	text-align: center;
 }
 
@@ -25,7 +32,7 @@ button {
 }
 
 .tab button{
-    background-color: #F9F7F7;
+    background-color: black;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
@@ -40,9 +47,10 @@ button {
     padding: 6px 12px;
     border-top: none;
     text-align: center;
+    color: rgb(255, 255, 255);
 }
 
-h1{color: #112D4E;}
+h1{color: white;}
 
 #click{color: gray;}
 
@@ -57,7 +65,6 @@ li{list-style: none;}
     padding: 15px 30px;
     border-radius: 15px;
     font-family: "paybooc-Light", sans-serif;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     font-weight: 600;
     transition: 0.25s;
@@ -75,18 +82,13 @@ li{list-style: none;}
 }
 
 .w-btn-indigo {
-    background-color: #DBE2EF;
-    color: #112D4E;
+  background-color: #DBE2EF;
+  color: white;
 }
 
 .w-btn-indigo-outline {
-    border: 3px solid #DBE2EF;
-    color: #112D4E;
-}
-
-.w-btn-indigo-outline:hover {
-    color: #112D4E;
-    background: #DBE2EF;
+    border: 3px solid white;
+    color: white;
 }
 
 .w-btn:hover {
@@ -136,42 +138,6 @@ body{
 h1{
   text-align: center;
   }
-.idol {
-  width: 60%;
-  margin: auto;
-  overflow: hidden;
-}
-  .images {
-    width: 90%;
-    height: auto;
-  }
-  .images img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  @media (min-width: 500px) {
-    .idol {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
-      grid-auto-flow: row dense;
-    }
-    .imageFlex1 {
-      display: grid;
-      row-gap: 20px;
-    }
-    .imageFlex2 {
-      display: grid;
-      row-gap: 20px;
-    }
-    .imageFlex3 {
-      display: grid;
-      row-gap: 20px;
-    }
-  }
-
   .location-listing {
     position: relative;
     overflow: hidden;
@@ -207,57 +173,9 @@ h1{
     line-height: 0;
     
   }
-  .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align: left;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-    background-color: black;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
   
   #main {
     transition: margin-left .5s;
-    padding: 16px;
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -265,9 +183,159 @@ h1{
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
-  .btob{
-    background-color: #112D4E;
-  }
   #b{
     color: #DBE2EF;
   }
+
+  .header h1 {
+    font-size:34px; 
+    font-weight:500; 
+    text-transform:uppercase;
+    text-align: left;
+    margin-left: 30px;
+  }
+  .header h1:before {
+      background-color: #c50000;
+      border-radius: 0.25rem;
+      content: '';
+      display: block;
+      height: 0.25rem;
+      width: 42px;
+      margin-bottom: 1.25rem;
+  }
+  .footer{
+    color: whitesmoke;
+  }
+  .menu * {
+    display: inline;
+}
+
+.menu li {
+    margin: 35px;
+}
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu ul {
+    padding-left: 0px;
+}
+
+.menu {
+    font-size: 20px;
+    font-style: italic;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+.lists{
+  text-align: center;
+  font-family: 'Pretendard-Thin';
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Pretendard-Thin';
+  font-size: 18px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.list_img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 7vh 5vh;
+  margin-bottom: 50px;
+}
+
+.favorites {
+  display:inline-flex;
+  margin-top: 300px;
+}
+.about{
+  background-color: #F3E0BE;
+}
+nav{
+  display: block;
+}
+.contact_img {
+  width: 100%;
+  height: 500px;
+  padding-bottom: 60px;
+}
+.like h1 {
+  text-align: center;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.ct {
+  margin-top: 80px;
+  font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+  color: white;
+  font-size: 50px;
+  font-style: italic;
+  margin: 35px;
+}
+.four {
+  text-align: center;
+  align-items: center;
+}
+.typing{
+  background-color: inherit;
+  border: 0;
+  outline: 0;
+}
+.btn{
+  padding: 15px 100px;
+  margin:10px 4px;
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #6098FF;
+  display: block;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+
+.btn:hover::before {
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+#demo{
+  color: white;
+}

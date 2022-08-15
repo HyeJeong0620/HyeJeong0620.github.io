@@ -5,138 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll.css">
+    <script src="index.js"></script>
     <title>자기소개 웹페이지</title>
 </head>
 <body>
     <div class="container" id="main">
-        <h1>안녕하세요! 양혜정입니다</h1>
-        <p id="click">Click on the buttons inside the tabbed menu:</p>
-        <div class="tab">
-            <button class="w-btn-outline w-btn-indigo-outline" type="button" onclick="openinform(this, 'infm')">정보</button>
-            <button class="w-btn-outline w-btn-indigo-outline" type="button" onclick="openinform(this, 'like')">좋아하는 것</button>
-            <button class="w-btn-outline w-btn-indigo-outline" type="button" onclick="openinform(this, 'hate')">싫어하는 것</button>
-            <button class="w-btn-outline w-btn-indigo-outline" type="button" onclick="openinform(this, 'tmi')">TMI</button>
+        <header id ="header"> 
+            <nav class ="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#like">Like</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="list">
+            <div class="header" id="home">
+                <button onclick="typeWriter()" class="typing btn" style="cursor: pointer;"><h1>Introduce</h1></button>
+                <p id="demo"></p>
+            </div>
         </div>
-        <div id="infm" class="tabcontent">
-            <h3>정보</h3>
-            <p>이름 : 양혜정</p>
-            <p>나이 : 17살(만16세)</p>
-            <p>MBTI : INFP(열정적인 중재자)</p>
-            <p></p>
-        </div>
-        <div id="like" class="tabcontent">
-            <h3>좋아하는 것</h3>
-            <p>고양이</p>
-            <p>집</p>
-            <p>웹툰</p>
-            <p>배구</p>
-        </div>
-        <div id="hate" class="tabcontent">
-            <h3>싫어하는 것</h3>
-            <p>벌레</p>
-        </div>
-        <div id="tmi" class="tabcontent">
-            <h3>TMI</h3>
-            <p>부산소프트웨어마이스터고 도서부</p>
-            <p>아몬드 좋아함</p>
-        </div>
-        <br>
-        <div class="btob">
-            <h1 id="b">BTOB</h1>
-        <div class="idol">
-            <div class="images">
-                <div class="imageFlex1">
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=FmuHZa6DQOc&t=3s">Insane</a>
-                        <img class="location-image" src="image/1.Insane.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=cXcUXWL1mJA">Pressy Play</a>
-                        <img class="location-image" src="image/2.Pressy Play.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=khE7pSOgDbA">스릴러</a>
-                        <img class="location-image" src="image/3.스릴러.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=qgtaSJ3PSMM">뛰뛰빵빵</a>
-                        <img class="location-image" src="image/4.뛰뛰빵빵.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=RQoOEEnKlVY">Move</a>
-                        <img class="location-image" src="image/5.MOVE.png" alt="">
-                    </div>
+        <div class="list" id="about">
+            <div class="button">
+                <div class="tab">
+                    <button class="w-btn-outline w-btn-indigo-outline" type="button" onclick="openinform(this, 'infm')">정보</button>
+                    <button class="w-btn-outline w-btn-indigo-outline" type="button" onclick="openinform(this, 'hate')">싫어하는 것</button>
+                    <button class="w-btn-outline w-btn-indigo-outline" type="button" onclick="openinform(this, 'tmi')">TMI</button>
+                </div>
+                <div id="infm" class="tabcontent">
+                    <h3>정보</h3>
+                    <p>이름 : 양혜정</p>
+                    <p>나이 : 17살(만16세)</p>
+                    <p>MBTI : INFP(열정적인 중재자)</p>
+                    <p></p>
+                </div>
+                <div id="hate" class="tabcontent">
+                    <h3>싫어하는 것</h3>
+                    <p>벌레</p>
+                </div>
+                <div id="tmi" class="tabcontent">
+                    <h3>TMI</h3>
+                    <p>부산소프트웨어마이스터고 도서부</p>
+                    <p>아몬드 좋아함</p>
                 </div>
             </div>
-            <div class="images">
-                <div class="imageFlex2">
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=CWAhNgjB5jM">The Winter's Tale</a>
-                        <img class="location-image" src="image/6.The Winter's Tale.png" alt="">
+        </div>
+        <div class="list" id="like">
+            <div class="like">
+                
+                <div class="favorites" id="container">
+                    <div class="lists">
+                        <img class = "list_img" src="image/16.Be Together.jpg">
+                        <p class = "list_text"> 아이돌</p>
                     </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=lr-MkPRHFms">I Mean</a>
-                        <img class="location-image" src="image/7.I Mean.png" alt="">
+                    <div class="lists">
+                        <img class = "list_img" src="image/mango.jpg">
+                        <p class = "list_text"> 과일</p>
                     </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=vcnv3jjWgSc">Remember That</a>
-                        <img class="location-image" src="image/8.Remember That.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=gzzKsis7Gho">NEW MEN</a>
-                        <img class="location-image" src="image/9.NEW MEN.png" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=QgoJwhfV60A">Feel'eM</a>
-                        <img class="location-image" src="image/10.Feel'eM.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="images">
-                <div class="imageFlex3">
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=RW9sb48p5fA">THIS IS US</a>
-                        <img class="location-image" src="image/11.THIS IS US.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=KLNr84h5qL4">HOUR MOMENT</a>
-                        <img class="location-image" src="image/12.HOUR MOMENT.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=SNpuKLfv1EE">complete</a>
-                        <img class="location-image" src="image/14.complete.png" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=wDkjWSt3HOM">Brother Act</a>
-                        <img class="location-image" src="image/15.Brother Act.jpg" alt="">
-                    </div>
-                    <div class="location-listing">
-                        <a class="location-title" href="https://www.youtube.com/watch?v=AvM16Vy1byc">Be Together</a>
-                        <img class="location-image" src="image/16.Be Together.jpg" alt="">
+                    <div class="lists">
+                        <img class = "list_img" src="image/cat.jpg">
+                        <p class = "list_text"> 동물</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="list" id="contact">
+            <div class = "four">
+                <img class = "contact_img" src ="image/blue.jpg">
+                <a href="mailto:catlqweasd@gmail.com" class="ct">Gmail</a>
+                <a href="https://github.com/HyeJeong0620" class="ct">Github</a>
+            </div>
+        </div> 
     </div>
-        </div>
     <script>
-        function openinform(seltab, buttonName){
+        function openinform(seltab, buttonName){ 
             let i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
-            for(i=0; i<tabcontent.length; i++){
-                tabcontent[i].style.display ="none";
-            }
-            tablinks = document.getElementsByClassName("w-btn-outline w-btn-indigo-outline");
-            for(let value of tablinks){
-                value.style.backgroundColor="inherit";
-            }
-            document.getElementById(buttonName).style.display="block";
-            seltab.style.backgroundColor="#DBE2EF"; 
+        for(i=0; i<tabcontent.length; i++){
+            tabcontent[i].style.display ="none";
+        }
+        tablinks = document.getElementsByClassName("w-btn-outline w-btn-indigo-outline");
+        for(let value of tablinks){
+            value.style.backgroundColor="inherit";
+        }
+        document.getElementById(buttonName).style.display="block";
+        seltab.style.backgroundColor="black";
         }
         function openNav() {
             document.getElementById("mySidebar").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
-}
-    </script>
+        }
+
+        var i = 0;
+        var txt = 'Hi, My name is Yang Hyejeong!';
+        var speed = 50;
+
+        function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+        }
+</script>
 </body>
 </html>
